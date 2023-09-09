@@ -3,10 +3,11 @@ import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
 import Banner from './components/navbar/Banner'
-import ImageDescription from './components/BodySection/ImageDescription'
 import Rooms from './components/BodySection/Rooms'
+import Footer from './components/footer/Footer'
+import Bathroom from './components/BodySection/Bathroom'
 
-const inter = Nunito({ subsets: ['latin'] })
+const inter = Nunito({ subsets: ['latin'] },)
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,8 +24,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         <Banner />
-        <ImageDescription />
         <Rooms />
+        <Bathroom />
+        <Footer />
         {children}</body>
     </html>
   )
